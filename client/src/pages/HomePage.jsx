@@ -10,7 +10,7 @@ const HomePage = () => {
 
 
   return (
-    <div className='w-full h-screen px-[15%] py-[5%]'>
+    <div className='w-full h-screen px-[4%] md:px-[15%] py-[5%] '>
       <div
         className={`backdrop-blur-xl border-2 border-gray-600 rounded-2xl overflow-hidden h-[100%] grid grid-cols-1 relative
           ${selectedUser ? 

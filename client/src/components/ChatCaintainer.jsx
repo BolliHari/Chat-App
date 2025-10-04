@@ -57,12 +57,14 @@ const ChatCaintainer = () => {
 
   return selectedUser ? (
     <div className='h-full overflow-scroll relative backdrop-blur-lg'>
-      <div className='flex items-center gap-3 mx-4 py-3 border-b border-gray-600'>
-        <img src={selectedUser.profilePic || assets.avatar_icon} alt="" className='w-8 rounded-full'/>
-        <p className='text-white font-semibold text-xl flex items-center gap-2'>
-          {selectedUser.fullName}
-          {onlineUsers.includes(selectedUser._id) && <span className="h-2 w-2 bg-green-500 rounded-full"></span>}
-        </p>
+      <div className='flex items-center gap-3 mx-4 py-3 border-b border-gray-600 justify-between'>
+        <div className='flex items-center gap-3'>
+          <img src={selectedUser.profilePic || assets.avatar_icon} alt="" className='w-8 rounded-full'/>
+          <p className='text-white font-semibold text-xl flex items-center gap-2'>
+            {selectedUser.fullName}
+            {onlineUsers.includes(selectedUser._id) && <span className="h-2 w-2 bg-green-500 rounded-full"></span>}
+          </p>
+        </div>
         <img onClick={() => setSelectedUser(null)} src={assets.arrow_icon} alt="" className='max-w-7 md:hidden'/>
       </div>
       {/* chat container */}
